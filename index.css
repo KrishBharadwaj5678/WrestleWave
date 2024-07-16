@@ -1,0 +1,369 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+    background-color: #333;
+    background-image: url("back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+} 
+
+div.top-part{
+    margin: 3vw auto 1.6vw auto;
+    text-align: center;
+    line-height: 1.7vw;
+    color: white;
+    color:#F0F0F0;
+}
+
+p.sub-head{
+    font-size: 1.4vw;
+    font-weight: 600;
+}
+
+div.instructions{
+    margin: 1vw 0vw 1vw 0vw;
+    text-align: center;
+    line-height: 2.3vw;
+}
+
+div.inner-instructions{
+    display: flex;
+    justify-content: center;
+}
+
+div.collapse{
+    margin: 1.3vw 0vw 0vw 0vw;
+}
+
+ul{
+    width: 45vw;
+    background: #f0f0f0;
+    border-radius: 0.3vw;
+    padding: 0.8vw 1.2vw 0.7vw 1.6vw;
+}
+
+li{
+    list-style-position: inside;
+    list-style-type: square;
+    text-align: left;
+    color: #333;
+}
+
+button.start-game,button.submit{
+    display: block;
+    margin: 1.2vw auto 0vw auto;
+    width: 8vw;
+    height: 2.9vw;
+    font-size: 1.4vw;
+    border-radius: 2vw;
+    color: white;
+    background: #4caf50;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+div.game-parent{
+    background: url("game-back.jpeg");
+    width: 33vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0vw auto;
+    padding: 0.4vw 0vw 0.2vw 0vw;
+    border-radius: 0.3vw;
+    display: none;
+}
+
+div.user-result{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 1vw 2vw 0vw 2vw; 
+    font-size: 1.3vw;
+}
+
+.audio-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7vw;
+    margin: 0vw 0vw 1vw 0vw;
+}
+.play-pause {
+    cursor: pointer;
+    width: 7vw;
+    height: 2.2vw;
+    font-size: 1.1vw;
+    color: white;
+    background: #4caf50;
+    outline: none;
+    border: none;
+    border-radius: 0.2vw;
+}
+.progress-bar {
+    width: 15vw;
+    height: 0.7vw;
+    background: #ddd;
+    cursor: pointer;
+    border-radius: 20vw;
+}
+.progress {
+    width: 0;
+    height: 100%;
+}
+
+div.input-box{
+    justify-content: center;
+    margin: 1.4vw 0vw 1vw 0vw;
+    display: flex;
+}
+
+input.game_input{
+    border: none;
+    outline: none;
+    height: 2.4vw;
+    width: 20vw;
+    border-radius: 0.2vw;
+    padding: 0vw 0vw 0vw 1vw;
+    font-size: 1.1vw;
+}
+
+div.bottom-btn{
+    display: flex;
+}
+
+button.submit{
+    background: #4caf50;
+    width: 7vw;
+    height: 2.7vw;
+    font-size: 1.21vw;
+    margin: 1.3vw auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.hint{
+    background: #FFA500;
+}
+
+h3.winning{
+    color:#4CAF50;
+    text-align:center;
+    margin: 0.5vw 0vw 1.4vw 0vw;
+    display: none;
+}
+
+@media (300px <= width <= 1200px){
+
+    div.top-part{
+        margin: 20vw auto 3vw auto;
+    }
+
+    h2.header{
+        font-size: 6.5vw;
+        margin: 0vw 5vw;
+        line-height: 9vw;
+    }
+    
+    p.sub-head{
+        font-size: 4.6vw;
+        line-height: 7.2vw;
+        margin: 4vw 8vw 0vw 8vw;
+    }
+
+    div.instructions{
+        margin: 5vw 0vw 1vw 0vw;
+        line-height: 7.7vw;
+    }
+  
+    div.collapse{
+        margin: 7vw 0vw 0vw 0vw;
+    }
+
+    ul{
+        width: 75vw;
+        height: 35vw;
+        border-radius: 0.8vw;
+        padding: 1.5vw 8vw 3.2vw 8vw;
+        overflow: scroll;
+    }
+    
+    li{
+        margin: 2.3vw 0vw 0vw 0vw;
+        font-size: 5vw;
+        text-align: left;
+    }
+
+    button.btn-info{
+        width: 34vw;
+        height: 11vw;
+        font-size: 4.4vw;
+        border-radius: 0.8vw;
+    }
+    
+    button.start-game,button.submit{
+        margin: 4.3vw auto 0vw auto;
+        width: 34vw;
+        height: 11vw;
+        font-size: 5vw;
+        border-radius: 0.8vw;
+    }
+
+    div.game-parent{
+        width: 85vw;
+        margin: 6vw auto 0vw auto;
+        padding: 3vw 0vw 2vw 0vw;
+        border-radius: 0.7vw;
+    }
+    
+    div.user-result{
+        margin: 0vw 4.5vw 0vw 4.5vw; 
+        font-size: 4.8vw;
+    }
+
+    .audio-player {
+        gap: 4vw;
+        margin: 0vw 0vw 2vw 0vw;
+    }
+
+    .play-pause {
+        width: 16vw;
+        height: 7.3vw;
+        font-size: 4vw;
+        border-radius: 0.4vw;
+    }
+
+    .progress-bar {
+        width: 30vw;
+        height: 2vw;
+        border-radius: 20vw;
+    }
+
+    div.input-box{
+        margin: 5.8vw 0vw 1vw 0vw;
+    }
+    
+    input.game_input{
+        height: 8vw;
+        width: 55vw;
+        border-radius: 0.9vw;
+        padding: 0vw 0vw 0vw 3.4vw;
+        font-size: 4.1vw;
+    }
+
+    div.main-duration{
+        font-size: 4.1vw;
+    }
+
+    button.submit{
+        width: 20vw;
+        height: 8.4vw;
+        font-size: 4vw;
+        margin: 5vw auto 2vw auto;
+    }
+
+    h3.winning{
+        margin: 3.2vw 0vw 1.4vw 0vw;
+    }
+}
+
+@media (300px <= width <= 330px){
+    ul{
+       height: 18vw;
+    }
+
+    button.btn-info{
+        font-size: 4.3vw;
+    }
+}
+
+@media (601px <= width <= 1200px){
+
+    body{
+        height:115vh;    
+    }
+
+    div.top-part{
+        margin: 10vw auto 0vw auto;
+    }
+
+    h2.header{
+        font-size: 5.3vw;
+        line-height: 7vw;
+    }
+    
+    p.sub-head{
+        line-height: 5vw;
+        font-size: 3.7vw;
+        margin: 3vw 10vw 0vw 10vw;
+    }
+
+    div.instructions{
+        line-height: 6.3vw;
+    }
+
+    ul{
+        width: 75vw;
+        height: 20vw;
+    }
+    
+    li{
+        margin: 2vw 0vw 0vw 0vw;
+        font-size: 4.6vw;
+    }
+
+    button.btn-info{
+        width: 30vw;
+        height: 9vw;
+        font-size: 4vw;
+    }
+
+    button.start-game,button.submit{
+        margin: 3vw auto 0vw auto;
+        width: 30vw;
+        height: 9vw;
+        font-size: 4.5vw;
+    }
+
+    div.input-box{
+        margin: 5.3vw 0vw 2vw 0vw;
+    }
+
+    button.submit{
+        width: 20vw;
+        height: 8vw;
+        font-size: 4vw;
+    }
+
+    h3.winning{
+        font-size: 5.8vw;
+    }
+
+    div.game-parent{
+        padding: 2vw 0vw 2vw 0vw;
+    }
+}
+
+@media (1400px <= width <= 1800px){
+    li{
+        font-size: 1.2vw;
+    }
+}
