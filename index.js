@@ -56,6 +56,7 @@ lose.src="lose.wav";
 
 let instructions=new Audio();
 instructions.src="instructions.mp3";
+instructions.loop=true;
 
 let usehint=new Audio();
 usehint.src="hint.wav";
